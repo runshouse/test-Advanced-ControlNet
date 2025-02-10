@@ -152,16 +152,16 @@ class ControlNetAdvanced(ControlNet, AdvancedControlBase):
         return to_return
 
 
-class ControlNetSD35Advanced(ControlNetSD35, ControlNetAdvanced):
-    def __init__(self, *args, **kwargs):
-        ControlNetAdvanced.__init__(self, *args, **kwargs)
+# class ControlNetSD35Advanced(ControlNetSD35, ControlNetAdvanced):
+#     def __init__(self, *args, **kwargs):
+#         ControlNetAdvanced.__init__(self, *args, **kwargs)
 
-    def copy(self):
-        return ControlNetAdvanced.copy(self, subtype=ControlNetSD35Advanced)
+#     def copy(self):
+#         return ControlNetAdvanced.copy(self, subtype=ControlNetSD35Advanced)
     
-    @staticmethod
-    def from_vanilla(v: ControlNetSD35, timestep_keyframe=None):
-        return ControlNetAdvanced.from_vanilla(v, timestep_keyframe, subtype=ControlNetSD35Advanced)
+#     @staticmethod
+#     def from_vanilla(v: ControlNetSD35, timestep_keyframe=None):
+#         return ControlNetAdvanced.from_vanilla(v, timestep_keyframe, subtype=ControlNetSD35Advanced)
 
 
 class T2IAdapterAdvanced(T2IAdapter, AdvancedControlBase):
